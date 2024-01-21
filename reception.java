@@ -1,0 +1,170 @@
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+import java.io.*;
+import java.sql.*;
+public class reception extends JFrame implements ActionListener
+{
+	JButton b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12;
+	reception()
+	{
+		getContentPane().setForeground(Color.BLUE);
+		getContentPane().setBackground(Color.WHITE);
+		setTitle("Reception ");
+		
+		setSize(700,700);
+	setLayout(null);
+	
+	b1 = new JButton("New Customer Form");
+	b2 = new JButton("Room");
+	b3 = new JButton("Departments");
+	b4 = new JButton("All Employee Info");
+	b5 = new JButton("Customer Info");
+	b6 = new JButton("Manager Info");
+	b7 = new JButton("Check out");
+	b8 = new JButton("Update status");
+	b9 = new JButton("Update Room status");
+	b10 = new JButton("Pick up Service");
+	b11 = new JButton("Search Room");
+	b12 = new JButton("Logout");
+	
+	add(b1);add(b2);add(b3);add(b4);add(b5);add(b8);
+	add(b9);add(b10);add(b11);add(b12);
+	
+	
+	b1.setBounds(60,30,150,30);
+	b2.setBounds(60,80,150,30);
+	b3.setBounds(60,130,150,30);
+	b4.setBounds(60,180,150,30);
+	b5.setBounds(60,230,150,30);
+	b8.setBounds(60,280,150,30);
+	b9.setBounds(60,330,150,30);
+	b10.setBounds(60,380,150,30);
+	b11.setBounds(60,430,150,30);
+	b12.setBounds(60,480,150,30);
+	// b11.setBounds(60,530,150,30);
+	// b12.setBounds(60,580,150,30);
+	
+		b1.setForeground(Color.WHITE);
+		b1.setBackground(Color.BLACK);
+		b2.setForeground(Color.WHITE);
+		b2.setBackground(Color.BLACK);
+		b3.setForeground(Color.WHITE);
+		b3.setBackground(Color.BLACK);
+		b4.setForeground(Color.WHITE);
+		b4.setBackground(Color.BLACK);
+		b5.setForeground(Color.WHITE);
+		b5.setBackground(Color.BLACK);
+		b6.setForeground(Color.WHITE);
+		b6.setBackground(Color.BLACK);
+		b7.setForeground(Color.WHITE);
+		b7.setBackground(Color.BLACK);
+		b8.setForeground(Color.WHITE);
+		b8.setBackground(Color.BLACK);
+		b9.setForeground(Color.WHITE);
+		b9.setBackground(Color.BLACK);
+		b10.setForeground(Color.WHITE);
+		b10.setBackground(Color.BLACK);
+		b11.setForeground(Color.WHITE);
+		b11.setBackground(Color.BLACK);
+		b12.setForeground(Color.WHITE);
+		b12.setBackground(Color.BLACK);
+		
+		b1.addActionListener(this);
+		b2.addActionListener(this);
+		b3.addActionListener(this);
+		b4.addActionListener(this);
+		b5.addActionListener(this);
+		b6.addActionListener(this);
+		b7.addActionListener(this);
+		b8.addActionListener(this);
+		b9.addActionListener(this);
+		b10.addActionListener(this);
+		b11.addActionListener(this);
+		b12.addActionListener(this);
+	
+		
+	ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("reception.jpg"));
+            Image i3 = i1.getImage().getScaledInstance(350, 200,Image.SCALE_DEFAULT);
+            ImageIcon i2 = new ImageIcon(i3);
+            JLabel image = new JLabel(i2);
+            image.setBounds(350,10,330,410);
+            add(image);
+			
+	setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+	public static void main(String str[])
+	{
+		new reception();
+	}
+	
+	public void actionPerformed(ActionEvent ae)
+	{
+		if(ae.getSource()==b1)
+		{
+			this.dispose();
+			new add_cust();
+		}
+		else if(ae.getSource()==b2)
+		{
+			this.dispose();
+			new Room();
+		}
+		else if(ae.getSource()==b3)
+		{
+			this.dispose();
+			new dept();
+		}
+		else if(ae.getSource()==b4)
+		{
+			this.dispose();
+			new emp_info();
+		}
+		else if(ae.getSource()==b5)
+		{
+			this.dispose();
+			new cust_info();
+		}
+		
+		else if(ae.getSource()==b7)
+		{
+			this.dispose();
+			new check_out();
+		}
+		else if(ae.getSource()==b8)
+		{
+			this.dispose();
+			new update_status();
+		}
+		
+		
+		else if(ae.getSource()==b9)
+		{
+			this.dispose();
+			new update_room_status();
+		}
+		else if(ae.getSource()==b10)
+		{
+			this.dispose();
+			new pick_up();
+		}
+		else if(ae.getSource()==b11)
+		{
+			this.dispose();
+			new search_room();
+		}
+		else if(ae.getSource()==b12)
+		{
+			this.dispose();
+			new login();
+		}
+	}
+	
+}
+		
+		
+	
+	
+	
+	

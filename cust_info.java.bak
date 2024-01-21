@@ -1,0 +1,9 @@
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+import java.io.*;
+import java.sql.*;
+//import net.proteanit.sql.DbUtils;
+import javax.swing.JTable;
+public class cust_info extends JFrame implements ActionListener
+{
